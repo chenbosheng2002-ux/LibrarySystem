@@ -33,3 +33,25 @@
 2. 添加图书
 3. 退出系统
 请选择操作编号:
+功能 1（查看图书）：实时输出当前系统内所有藏书的编号、书名与状态。
+
+功能 2（添加图书）：支持用户交互式输入编号与书名，动态追加至内存集合中。
+
+6. 结果分析与讨论 (Result Analysis & Discussion)
+优点：代码结构清晰，内存占用小，响应速度快，完全满足基础管理需求。
+
+局限性与改进方向：当前数据仅存储于内存（RAM）中，程序退出后数据会丢失。后续可引入 JDBC 与 MySQL 数据库或文件读写（I/O）实现持久化存储。
+
+7. 参考文献 (References)
+孙卫琴. Java面向对象编程 [M]. 北京: 电子工业出版社, 2017.
+
+Oracle Documentation. The Collections Framework (Java SE). https://docs.oracle.com/en/java/
+
+🛠️ 附录：快速运行指南
+克隆或下载本项目源码：
+
+Bash
+git clone [https://github.com/chenbosheng2002-ux/LibrarySystem.git](https://github.com/chenbosheng2002-ux/LibrarySystem.git)
+使用 Eclipse 打开项目，定位至 src/Main.java。
+
+点击 Run 运行，即可在控制台进行交互。

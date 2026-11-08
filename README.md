@@ -1,30 +1,35 @@
-# 📚 Java Library Management System (简易图书管理系统)
+# 📚 Java 控制台版简易图书管理系统 (Library Management System)
 
-基于 Java 开发的控制台版简易图书管理系统，采用面向对象设计思想，利用 `ArrayList` 和 `Scanner` 实现图书信息的存储与交互管理。本项目为 Java 课程期末项目/基础练习。
-
----
-
-## ✨ 核心功能
-
-* **📖 查看图书**：实时展示图书列表中所有书籍的编号、书名以及借阅状态（可借阅 / 已借出）。
-* **➕ 添加图书**：支持用户自定义输入图书编号与书名，动态扩充图书库存。
-* **🚪 安全退出**：友好的交互终止机制，安全退出系统。
+* **课程名称**：Java 编程期末项目
+* **指导老师**：徐东曼
+* **开发者账号**：`chenbosheng2002-ux`
 
 ---
 
-## 🛠️ 开发环境与技术栈
+## 1. 项目主题理由 (Project Theme Rationale)
+图书管理系统是计算机科学与技术专业学习面向对象编程（OOP）和数据结构的经典实践课题。随着数字化图书馆的普及，高效、轻量的信息检索与库存管理系统在实际应用中具有重要价值。本设计旨在通过实现一个基于控制台的简易图书管理系统，巩固 Java 基础语法、集合框架应用以及面向对象设计思想，具备良好的可扩展性与实用价值。
 
-* **开发语言**：Java (JDK 25+)
-* **开发工具**：Eclipse IDE
-* **核心技术**：
-  * 面向对象编程（OOP：封装、多态思想）
-  * Java Collections Framework (`ArrayList`)
-  * 标准输入输出与流程控制 (`Scanner`, `while` 循环)
+## 2. 相关研究与技术路线 (Related Research)
+在现有的控制台图书管理方案中，多数系统采用简单的数组存储，存在容量固定、扩展困难的问题。本项目引入了 Java 集合框架中的 `ArrayList` 动态数组，有效解决了图书数量动态增减的问题；同时结合 `Scanner` 类实现人机交互，保证了程序的健壮性与易用性。
 
----
+## 3. 项目设计 (Project Design)
+本项目遵循面向对象设计原则，主要包含两个核心类：
+* **`Book` 类**：封装图书的基本属性（如图书编号 `id`、书名 `title`、借阅状态 `status`），提供构造方法及 Getter/Setter 方法。
+* **`Main` 类**：系统控制核心，负责初始化图书数据源，维护基于 `ArrayList<Book>` 的图书列表，并通过 `while` 循环与 `switch/if-else` 分支结构提供交互菜单。
 
-## 🚀 快速运行指南
+## 4. 实施过程 (Implementation)
+1. **环境搭建**：基于 Windows 环境，使用 Eclipse IDE 配置工作空间并创建 Java 项目。
+2. **核心代码编写**：
+   * 实现 `Book` 对象的属性封装。
+   * 在 `Main` 中初始化默认测试数据（如《Java面向对象程序设计》）。
+   * 编写“查看图书”与“添加图书”的核心逻辑方法。
+3. **版本控制**：通过 GitHub 仓库 (`chenbosheng2002-ux/LibrarySystem`) 进行源码托管与版本迭代。
 
-1. **克隆仓库到本地**（或直接下载 ZIP 包）：
-   ```bash
-   git clone [https://github.com/chenbosheng2002-ux/LibrarySystem.git](https://github.com/chenbosheng2002-ux/LibrarySystem.git)
+## 5. 程序运行与结果 (Program Running & Results)
+程序启动后，控制台输出操作主菜单：
+```text
+--- 简易图书管理系统 ---
+1. 查看所有图书
+2. 添加图书
+3. 退出系统
+请选择操作编号:
